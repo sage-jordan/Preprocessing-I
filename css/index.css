@@ -134,3 +134,10 @@ html,
 body {
   height: 100%;
 }
+head {
+  width: 90%;
+  background-color: teal;
+}
+head nav {
+  display: flex;
+}
