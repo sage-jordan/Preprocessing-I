@@ -55,13 +55,52 @@ table {
 
 html, body {
 	height: 100%;
+	font-size: 62.5%;
 }
-
-head {
+body {
+	width: 1000px;
+}
+.section() {
 	width: 90%;
-	background-color: teal;
+	margin: 0px auto;
+}
+section {
+	.section();
+	font-size: 3em;
 
 	nav {
 		display: flex;
-	}
-}
+		justify-content: flex-end;
+		margin: 0.5em;
+
+		a {
+			text-decoration: none;
+			margin: 0.7em;
+			color: black;
+		} //a
+	} //nav
+} //section
+.intro {
+	display: flex;
+	align-items: flex-start;
+	.section();
+	font-size: 1em;
+
+	img {
+		width: 14em;
+		margin: 0em 0.4em;
+	} //img
+
+	.about {
+
+		// h1 {
+		// 	font-size: 90px;
+		// 	padding-left: 1em;
+		// } //h1
+
+		// p {
+		// 	width: 20%;
+		// }  //p
+
+	} //about
+} //intro
