@@ -138,8 +138,12 @@ body {
 }
 body {
   width: 1000px;
-  border: 1px solid black;
   margin: 2em auto;
+}
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+  }
 }
 .row-one {
   width: 90%;
@@ -151,10 +155,21 @@ body {
   justify-content: flex-end;
   margin: 0.5em;
 }
+@media (max-width: 500px) {
+  .row-one nav {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .row-one nav a {
   text-decoration: none;
   margin: 0.7em;
   color: black;
+}
+@media (max-width: 500px) {
+  .row-one nav a {
+    border-bottom: 0.1em solid lightgray;
+  }
 }
 .row-one img {
   width: 16em;
@@ -163,6 +178,15 @@ body {
   padding-left: 0.5em;
   position: absolute;
 }
+@media (max-width: 500px) {
+  .row-one img {
+    width: 80%;
+    height: 60%;
+    position: relative;
+    margin: 0 10%;
+    padding: 0em;
+  }
+}
 .intro {
   display: flex;
   flex-wrap: wrap;
@@ -170,9 +194,24 @@ body {
   font-size: 1em;
   background-color: lightgray;
 }
+@media (max-width: 500px) {
+  .intro {
+    width: 95%;
+    padding: 0 0 2em 0;
+    margin: 1em auto;
+  }
+}
+@media (max-width: 500px) {
+}
 .intro .about h1 {
   font-size: 2.3em;
   margin: 1em 0em 0.5em 0.5em;
+}
+@media (max-width: 500px) {
+  .intro .about h1 {
+    margin: 1em auto;
+    text-align: center;
+  }
 }
 .intro .about p {
   font-size: 1.2em;
@@ -190,6 +229,12 @@ body {
   padding: 1em 2em;
   font-size: 1em;
 }
+@media (max-width: 500px) {
+  .intro .skills ul li {
+    width: 90%;
+    text-align: center;
+  }
+}
 .intro .skills ul li:last-child {
   border-bottom: 0.1em solid black;
 }
@@ -201,6 +246,12 @@ body {
   margin: 1em 0em 1em 2.2em;
   width: 90%;
 }
+@media (max-width: 500px) {
+  .row-two .work-hist {
+    position: relative;
+    margin: 0 10%;
+  }
+}
 .row-two .work-hist h1 {
   font-size: 1.7em;
 }
@@ -211,6 +262,11 @@ body {
 .row-two .contact {
   margin: 0em 0em 1em 60%;
   padding-top: 1em;
+}
+@media (max-width: 500px) {
+  .row-two .contact {
+    margin: 0 10%;
+  }
 }
 .row-two .contact h1 {
   font-size: 1.7em;
