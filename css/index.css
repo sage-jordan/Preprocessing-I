@@ -134,33 +134,65 @@ html,
 body {
   height: 100%;
   font-size: 62.5%;
+  font-family: 'Cormorant Garamond', serif;
 }
 body {
   width: 1000px;
+  border: 1px solid black;
+  margin: 2em auto;
 }
-section {
+.row-one {
   width: 90%;
   margin: 0px auto;
   font-size: 3em;
 }
-section nav {
+.row-one nav {
   display: flex;
   justify-content: flex-end;
   margin: 0.5em;
 }
-section nav a {
+.row-one nav a {
   text-decoration: none;
   margin: 0.7em;
   color: black;
 }
+.row-one img {
+  width: 16em;
+  height: 24em;
+  margin: 2em 0.4em;
+  padding-left: 0.5em;
+  position: absolute;
+}
 .intro {
   display: flex;
-  align-items: flex-start;
-  width: 90%;
-  margin: 0px auto;
+  flex-wrap: wrap;
+  padding: 1em 0em 2em 17em;
+  font-size: 1em;
+  background-color: lightgray;
+}
+.intro .about h1 {
+  font-size: 2.3em;
+  margin: 1em 0em 0.5em 0.5em;
+}
+.intro .about p {
+  font-size: 1.2em;
+  padding-left: 1em;
+}
+.intro .skills h1 {
+  font-size: 2em;
+  margin: 1em 0.5em 0.2em 0.5em;
+}
+.intro .skills ul li {
+  border-left: 0.1em solid black;
+  border-right: 0.1em solid black;
+  border-top: 0.1em solid black;
+  margin: 0em 1em;
+  padding: 1em 2em;
   font-size: 1em;
 }
-.intro img {
-  width: 14em;
-  margin: 0em 0.4em;
+.intro .skills ul li:last-child {
+  border-bottom: 0.1em solid black;
+}
+.work-hist h1 {
+  font-size: 2em;
 }
