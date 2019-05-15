@@ -52,11 +52,12 @@ table {
 * {
     box-sizing: border-box;
 }
-
+@font: 'Cormorant Garamond', serif;
+@black: 0.1em solid black;
 html, body {
 	height: 100%;
 	font-size: 62.5%;
-	font-family: 'Cormorant Garamond', serif;
+	font-family: @font;
 }
 body {
 	width: 1000px;
@@ -121,29 +122,52 @@ body {
 		ul {
 			
 			li {
-				border-left: 0.1em solid black;
-				border-right: 0.1em solid black;
-				border-top: 0.1em solid black;
+				border-left: @black;
+				border-right: @black;
+				border-top: @black;
 				margin: 0em 1em;
 				padding: 1em 2em;
 				font-size:  1em;
 			} //li
 			
 			li:last-child {
-				border-bottom: 0.1em solid black;
+				border-bottom: @black;
 			}
 		} //ul
 	} //skills
 } //intro
 
-.work-hist {
-	
-	h1 {
-		font-size: 2em;
-	}
-	ul {
-		li {
-
-		}
-	}
+.padding(){
+	padding: 0.5em;
 }
+.row-two {
+	font-size: 3em;
+
+	.work-hist {
+		position: absolute;
+		margin: 1em 0em 1em 2.2em;
+		width: 90%;
+		h1 {
+			font-size: 1.7em;
+		}
+		ul {
+			li {
+				.padding();
+				font-size: 1.3em;
+			}
+		}
+	} //work hist
+
+	.contact {
+		margin: 0em 0em 1em 60%;
+		padding-top: 1em;
+
+		h1 {
+			font-size: 1.7em;
+			padding-bottom: 0.5em;
+		}
+		li {
+			.padding();
+		}
+	} //contact
+} //row two
