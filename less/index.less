@@ -52,8 +52,169 @@ table {
 * {
     box-sizing: border-box;
 }
-
+@font: 'Cormorant Garamond', serif;
+@black: 0.1em solid black;
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+	font-family: @font;
 }
+body {
+	width: 1000px;
+	
+	margin: 2em auto;
 
+	@media(max-width:500px){
+		width: 100%;
+	}
+}
+.section() {
+	width: 90%;
+	margin: 0px auto;
+}
+.row-one {
+	.section();
+	font-size: 3em;
+
+	nav {
+		display: flex;
+		justify-content: flex-end;
+		margin: 0.5em;
+
+		@media(max-width:500px){
+			flex-direction: column;
+			text-align: center;
+		}
+		a {
+			text-decoration: none;
+			margin: 0.7em;
+			color: black;
+
+			@media(max-width:500px){
+				border-bottom: 0.1em solid lightgray;
+			}
+		} //a
+	} 
+	img {
+		width: 16em;
+		height: 24em;
+		margin: 2em 0.4em;
+		padding-left: 0.5em;
+		position: absolute;
+
+		@media(max-width:500px){
+			width: 80%;
+			height: 60%;
+			position: relative;
+			margin: 0 10%;
+			padding: 0em;
+		}
+	} //img
+} //section
+
+.intro {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1em 0em 2em 17em;
+	font-size: 1em;
+	background-color: lightgray;
+
+	@media(max-width:500px){
+		width: 95%;
+		padding: 0 0 2em 0;
+		margin: 1em auto;
+	}
+	.about {
+		@media(max-width:500px){
+			// width: 100%;
+		}
+		h1 {
+			font-size: 2.3em;
+			margin: 1em 0em 0.5em 0.5em;
+
+			@media(max-width:500px){
+				margin: 1em auto;
+				text-align: center;
+			}
+		} //h1
+
+		p {
+			font-size: 1.2em;
+			padding-left: 1em;
+		}  //p
+
+	} //about
+
+	.skills {
+
+		h1 {
+			font-size: 2em;
+			margin: 1em .5em 0.2em 0.5em;
+		} //h1
+
+		ul {
+
+			li {
+				border-left: @black;
+				border-right: @black;
+				border-top: @black;
+				margin: 0em 1em;
+				padding: 1em 2em;
+				font-size:  1em;
+
+				@media(max-width:500px){
+					width: 90%;
+					text-align: center;
+				}
+			} //li
+			
+			li:last-child {
+				border-bottom: @black;
+			}
+		} //ul
+	} //skills
+} //intro
+
+.padding(){
+	padding: 0.5em;
+}
+.row-two {
+	font-size: 3em;
+
+	.work-hist {
+		position: absolute;
+		margin: 1em 0em 1em 2.2em;
+		width: 90%;
+
+		@media(max-width:500px){
+			position: relative;
+			margin: 0 10%;
+		}
+		h1 {
+			font-size: 1.7em;
+		}
+		ul {
+			li {
+				.padding();
+				font-size: 1.3em;
+			}
+		}
+	} //work hist
+
+	.contact {
+		margin: 0em 0em 1em 60%;
+		padding-top: 1em;
+
+		@media(max-width:500px){
+			margin: 0 10%;
+		}
+
+		h1 {
+			font-size: 1.7em;
+			padding-bottom: 0.5em;
+		}
+		li {
+			.padding();
+		}
+	} //contact
+} //row two
